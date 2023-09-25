@@ -18,6 +18,31 @@ body {
 /* ************************* */
 /* GENERAL REUSABLE COMPONENTS */
 /* ************************* */
+
+.container {
+  /* convention --> 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -74,6 +99,9 @@ body {
   margin-right: 1.6rem !important ;
 }
 
+.section-how {
+}
+
 /* ************************* */
 /* HEADER */
 /* ************************* */
@@ -91,6 +119,48 @@ body {
 
 .logo {
   height: 2.2rem;
+}
+
+/* ************************* */
+/* NAVIGATION */
+/* ************************* */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  /* should have both the classes */
+  /* we added extra to add the specificity so that it could add white color */
+  display: 1.2rem 2.4rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
 }
 
 /* ************************* */
@@ -153,4 +223,13 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/* ************************* */
+/* HOW IT WORKS SECTION */
+/* ************************* */
+
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orangered;
 }
